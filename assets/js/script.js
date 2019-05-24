@@ -86,11 +86,11 @@ $(document).ready(function() {
     // jQuery effects - Challenge 1. Make the first button hide when clicked
 
     $("#button-1").click(function() {
-        $("#par-1").toggle();
+        $("#par-1").slideToggle();
     });
     
     // additional code - make button re-appear
     $("#button-1").click(function() {
-        $("#para-1").toggle();
+        $("#para-1").slideToggle();
     });
 });
