@@ -85,12 +85,12 @@ $(document).ready(function() {
 
     // jQuery effects - Challenge 1. Make the first button hide when clicked
 
-    $("#button-1").mouseenter(function() {
-        $("#button-1").hide(1000);
+    $("#button-1").click(function() {
+        $("#par-1").toggle();
     });
     
     // additional code - make button re-appear
-    $("#button-1").mouseleave(function() {
-        $("#button-1").show(1000);
+    $("#button-1").click(function() {
+        $("#para-1").toggle();
     });
 });
