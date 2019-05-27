@@ -36,8 +36,26 @@ div{
 	padding: 1em .75em;
 	text-decoration: none;
 	color: #fff;
-
 }
+
+.makeRed{
+	display: flex;/*creates flex item*/
+	box-sizing:border-box;
+	border-radius: 4px;
+	display: block;
+	width: 100%;
+	background-color:red;
+	text-align: center;
+	padding: 1em .75em;
+	text-decoration: none;
+	color: #fff;
+}
+
+.makeBorder{
+	border: solid pink 2px;
+	
+}
+
 
 .card_bottom{
 	display: flex;
