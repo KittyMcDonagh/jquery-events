@@ -91,6 +91,18 @@ div{
 	padding: 20px;
 	background-color: #fff;
 }
+
+.card-change{
+	flex:1; /* equal width to cards applied*/
+	display: flex;	/* make the contents controllable by flexbox*/
+	flex-flow:column;	/* */
+	min-width: 240px; /**/
+	margin: 10px;
+	padding: 20px;
+	background-color: #66ffff;
+}
+
+
 /*adds colour red to paragraphs when called by jquery function*/
 .highlight_text{
 	background-color: #EB5255;

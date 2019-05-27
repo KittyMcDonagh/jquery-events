@@ -1,4 +1,5 @@
 //waits until page is loaded first
+
 $(document).ready(function() {
 
     //applies colour red to paragraphs when clicked on 
@@ -71,23 +72,45 @@ $(document).ready(function() {
         $("#hr_css").addClass("h2_font_size");
     });
 
+    $("#button-1").mouseenter(function() {
+        $(this).removeClass("makeRed").addClass("makeBorder"); // 'this' instead of repeating "button-1"
+    });
+
+    $("#button-1").mouseleave(function() {
+        $(this).removeClass("makeBorder").addClass("makeRed"); // 'this' instead of repeating "button-1"
+    });
+
+    // hide / show paragraph 
+    $("#button-1").click(function() {
+        $("#par-1").hide(2000).show(2000);
+    });
+    
+    // Change stream background color
+    $(".link").on("click",function() {
+        var classNames = $(this).attr("class").split(" ");
+        if ($("." + clasNames[1].css("background-color" == "#fff")))
+        $("." + classNames[1]).css("background-color", "#66ffff");
+    });
 
 
-    //applies colour black to body background when mouse enters over buttons
-    //    $(".bottom_button").mouseenter(function() {
-    //       $("body").css("background-color", "black");
-    //    });
-
-    //applies colour grey to body background when mouse leaves buttons
-    //    $(".bottom_button").mouseleave(function() {
-    //        $("body").css("background-color", "#eee");
-    //   });
-
-    // jQuery effects - Challenge 1. Make the first button hide when clicked
-
-    //  $("#button-1").mouseenter(function() {
-    //       $("#button-1").fadeTo(1000, 0.5);
 });
+
+
+//applies colour black to body background when mouse enters over buttons
+//    $(".bottom_button").mouseenter(function() {
+//       $("body").css("background-color", "black");
+//    });
+
+//applies colour grey to body background when mouse leaves buttons
+//    $(".bottom_button").mouseleave(function() {
+//        $("body").css("background-color", "#eee");
+//   });
+
+// jQuery effects - Challenge 1. Make the first button hide when clicked
+
+//  $("#button-1").mouseenter(function() {
+//       $("#button-1").fadeTo(1000, 0.5);
+// });
 
 // additional code - make button re-appear
 //   $("#button-1").mouseleave(function() {
@@ -104,13 +127,7 @@ $(document).ready(function() {
 // Create class to turn button red and add to html. Create border class, dont add to html. 
 // Remove red class, add border on mouseenter, vice versa on mouseleave.
 
-$("#button-1").mouseenter(function() {
-    $(this).removeClass("makeRed").addClass("makeBorder");     // 'this' instead of repeating "button-1"
-});
 
-$("#button-1").mouseleave(function() {
-    $(this).removeClass("makeBorder").addClass("makeRed");      // 'this' instead of repeating "button-1"
-});
 
 // Method Chaining - Challenge 2
 
@@ -123,10 +140,6 @@ $("#button-1").mouseleave(function() {
 //    $("#par-1").slideDown(2000);
 // });
 
-// hide / show paragraph 
-	$("#button-1").click(function() {
-		$("#par-1").hide(2000).show(2000);
-	});
 
 // Method Chaining - Challenge 3
 
@@ -135,36 +148,30 @@ $("#button-1").mouseleave(function() {
 //	$("#button-2").mouseover(function() {
 //		$("#par-2").fadeOut(2000).fadeIn(2000);
 //	});
-	
+
 // Mouseover: show / hide on specific button. This affects only the paragraph selected
 
 //	$("#button-3").mouseover(function() {
 //		$("#par-3").hide(2000).show(2000);
 //	});
-	
+
 // Mouseover: fade in / out on all buttons. All buttons will react when you mouseover one.
 
-	$("button").mouseover(function() {
-		$("p").fadeOut(2000).fadeIn(2000);
-	});
-	
+//            $("button").mouseover(function() {
+//                $("p").fadeOut(2000).fadeIn(2000);
+//            });
+
 // Mouseover: show / hide on all buttons. All buttons will react when you mouseover one.
 
-	$("button").mouseover(function() {
-		$("p").hide(2000).show(2000);
-	});
+//            $("button").mouseover(function() {
+//                $("p").hide(2000).show(2000);
+//            });
+
 
 // Method Chaining - Challenge 4
 
 //Go to eir.ie and using developer tools, change all the links so that they point to codeinsitute.net
 
-$("a").attr("href","https://codeinstitute.net/"); // Note that if the "https://" is not included, it will tag "codeinstitute.net" onto eir.ie.
-    
+//  $("a").attr("href","https://codeinstitute.net/");   // Note that if the "https://" is not included, it will tag "codeinstitute.net" onto eir.ie.
 
-
-
-
-
-
-
-
+// The importance of This - Challenge 1
