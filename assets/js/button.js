@@ -17,7 +17,9 @@ $(document).ready(function() {
     // When a panel is clicked, all siblings fade to 10% opacity
 
     $(".theButton").click(function() {
-        $(".container").siblings().fadeTo("slow", .1);       // fade to 10% opacity
+        var classNames = $(this).attr("class").split(" ");
+        $(".superButton").css("color", classNames[2]);        // Change reset button text to color of button. 3rd class name is color 
+        $(".container").siblings().fadeTo("slow", .1);       // fade to .1 opacity
     });
 
     // When reset is clicked, all panels revert to full opacity
