@@ -84,16 +84,43 @@ $(document).ready(function() {
     $("#button-1").click(function() {
         $("#par-1").hide(2000).show(2000);
     });
+
+    // Change stream background color - !! This didnt work !!
+    //    $(".link").on("click", function() {
+    //        var classNames = $(this).attr("id").split(" ");
+    //        if ($("." + classNames[1]).css("background-color") != "#66ffff") {
+    //            $("." + classNames[1]).css("background-color", "#fff");
+    //        }
+    //        else {
+    //            $("." + classNames[1]).css("background-color", "#66ffff");
+
+    //       }
     
-    // Change stream background color
-    $(".link").on("click",function() {
-        var classNames = $(this).attr("class").split(" ");
-        if ($("." + clasNames[1].css("background-color" == "#fff")))
-        $("." + classNames[1]).css("background-color", "#66ffff");
+    // Applied solution code instead
+
+    $(".stream-nav").on("click", function() {
+        // A selector to match all cards in all streams
+        var allStreamsCardsSelector = ".card";
+        // A selector to match just this stream's cards
+        // for this, we use the class with the name of the stream,
+        // which is the same as this nav link's id and then the "-card" suffix.
+        var thisStreamCardsSelector = "." + this.id + "-card";
+
+        // First remove the highlight from all of the cards
+        $(allStreamsCardsSelector).removeClass("card-highlight");
+        // Then apply the highlight to just this stream's cards
+        $(thisStreamCardsSelector).addClass("card-highlight");
+    });
+    
+    // Traversing the DOM, Challenge 1. Highlight all links within a paragraph.
+    
+    $("p").on("click", function() {
+        $(this).children("a").css("background-color", "yellow")    // returns all the links that are "children" of (are within) the paragraph
     });
 
-
 });
+
+
 
 
 //applies colour black to body background when mouse enters over buttons
