@@ -22,9 +22,19 @@ div{
 	border-radius: 4px;
 }
 
+/* DOM challenge 3 */
+
+/* .card p {
+	display: none;
+} */
+
+
+
+
 .card_image{
 	width: 100%;
 }
+
 .bottom_button{
 	display: flex;/*creates flex item*/
 	box-sizing:border-box;
@@ -89,7 +99,9 @@ div{
 	min-width: 240px; /**/
 	margin: 10px;
 	padding: 20px;
-	background-color: #fff;
+	background-color: #fff; 
+
+		
 }
 
 .card-highlight{
@@ -174,4 +186,10 @@ li{
 	li{
 		font-size: 2em;
 	}
+}
+
+/* DOM challenge 4 */
+
+.highlight{
+	background-color: pink;
 }

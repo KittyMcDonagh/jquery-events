@@ -95,7 +95,7 @@ $(document).ready(function() {
     //            $("." + classNames[1]).css("background-color", "#66ffff");
 
     //       }
-    
+
     // Applied solution code instead
 
     $(".stream-nav").on("click", function() {
@@ -111,17 +111,34 @@ $(document).ready(function() {
         // Then apply the highlight to just this stream's cards
         $(thisStreamCardsSelector).addClass("card-highlight");
     });
-    
+
     // Traversing the DOM, Challenge 1. Highlight all links within a paragraph.
-    
+
     $("p").on("click", function() {
-        $(this).children("a").css("background-color", "yellow")    // returns all the links that are "children" of (are within) the paragraph
+        $(this).children("a").css("background-color", "yellow") // returns all the links that are "children" of (are within) the paragraph
     });
 
+
+
+    // Traversing the DOM, Challenge  (see files "domchlng2" for challenge 2). 
+    // Give the paragraphs inside the cards a display: none; Use slideDown to display the card paragraphs when the card_image is clicked.
+
+    //    $("img").on("click", function() {
+    //        $(this).next().children("p").slideDown('slow');  // slide down
+    //        $(this).next().children("p").slideToggle('slow'); // toggle slidedown
+
+    //    });
+    
+    // Traversing the DOM Challeng 3
+    // When a card is clicked on, the background color is highlighted – e.g., set background-color to pink via adding a new class. 
+    // When the card is clicked again, it is unhighlighted
+
+    $(".card").click(function() {
+        $(this).toggleClass("highlight");
+    });
+
+
 });
-
-
-
 
 //applies colour black to body background when mouse enters over buttons
 //    $(".bottom_button").mouseenter(function() {
