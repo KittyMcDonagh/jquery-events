@@ -128,7 +128,7 @@ $(document).ready(function() {
     //        $(this).next().children("p").slideToggle('slow'); // toggle slidedown
 
     //    });
-    
+
     // Traversing the DOM Challeng 3
     // When a card is clicked on, the background color is highlighted – e.g., set background-color to pink via adding a new class. 
     // When the card is clicked again, it is unhighlighted
@@ -137,6 +137,21 @@ $(document).ready(function() {
         $(this).toggleClass("highlight");
     });
 
+    // Traversing the DOM Challeng 3
+    // Add two more nav elements to the nav bar, select and all. When select is clicked, all panels disappear except those highlighted 
+    // by clicking on them. It is a difficult challenge. Think about what is different about the highlighted panels. How could we select 
+    // only those without the highlighting? Then make all the panels reappear by clicking all. 
+    // A lot is going on here, but this combining of functions and selections is what makes jQuery so powerful. Take your time to understand 
+    // what’s happening before moving on to the next section.
+
+    $("#select_btn").click(function() {
+        $(".card:not(.highlight)").hide();            // dont forget the () at end of hide
+    });
+
+    
+    $("#all_btn").click(function() {
+        $(".card").show();                             // dont forget the () at end of show
+    });
 
 });
 
