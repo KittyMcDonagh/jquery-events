@@ -152,8 +152,12 @@ $(document).ready(function() {
     $("#all_btn").click(function() {
         $(".card").show();                             // dont forget the () at end of show
     });
+    
+    
 
-});
+
+
+
 
 //applies colour black to body background when mouse enters over buttons
 //    $(".bottom_button").mouseenter(function() {
